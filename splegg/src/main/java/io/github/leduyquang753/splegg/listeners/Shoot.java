@@ -18,8 +18,10 @@ public final class Shoot implements Listener {
 	public void onPlayerUse(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
 		if (player.getItemInHand().getType() == Material.IRON_BARDING) {
-			Egg bullet = player.getWorld().spawn(event.getPlayer().getLocation().add(new Vector(0.0D, 1.0D, 0.0D)), Egg.class);
+			Egg bullet = player.getWorld().spawn(player.getLocation(), Egg.class);
+			bullet.setVelocity(player.getLocation().getDirection());
 			bullet.setShooter(player);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_EGG_THROW, 1, 1);
 		}
 	}
 	
