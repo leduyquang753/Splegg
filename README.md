@@ -1,7 +1,7 @@
 # Splegg
 A simple Splegg game
 
-Hello everyone! Welcome to my Splegg plugin! Now this project is currently at zero and I will store every future data here.
+Hello everyone! Welcome to my Splegg plugin! Now this project is under heavy development and every data is being saved here.
 
 This is my current checklist:
    - [ ] Create the core of the plugin: Splegg guns
