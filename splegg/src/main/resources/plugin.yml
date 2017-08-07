@@ -1,0 +1,9 @@
+name: Splegg
+main: io.github.leduyquang753.splegg.Main
+version: 0
+author: leduyquang753
+
+commands:
+  gun:
+    description: Get the Splegg gun.
+    usage: /gun
