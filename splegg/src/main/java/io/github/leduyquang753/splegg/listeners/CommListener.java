@@ -39,4 +39,5 @@ public final class CommListener implements CommandExecutor {
 			Main.getInstance().getLogger().info("A Splegg gun has been given to a player.");
 		}
 	}
+	return true;
 }
