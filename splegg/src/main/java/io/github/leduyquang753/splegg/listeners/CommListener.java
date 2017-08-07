@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import io.github.leduyquang753.splegg.Main;
 
-public final class CommListener implements Listener {
+public final class CommListener implements CommandExecutor {
 	@EventHandler
-	public void onCommand(CommandSender player, Command cmd, String label, String[] args) {
+	public boolean onCommand(CommandSender player, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("gun")) {
 			player.sendMessage(ChatColor.YELLOW + "OK. Here is your gun. Keep it safe.");
 			ItemStack gun = new ItemStack(Material.IRON_BARDING);
