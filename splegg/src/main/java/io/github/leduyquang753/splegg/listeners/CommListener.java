@@ -17,6 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import io.github.leduyquang753.splegg.Main;
 
 public final class CommListener implements CommandExecutor {
+	
 	@EventHandler
 	public boolean onCommand(CommandSender player, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("gun")) {
@@ -36,8 +37,8 @@ public final class CommListener implements CommandExecutor {
 			PlayerInventory inven = ((HumanEntity) player).getInventory();
 			inven.addItem(gun);
 			
-			Main.getInstance().getLogger().info("A Splegg gun has been given to a player.");
+			Main.getInstance().getLogger().info("A Splegg gun has been given to " + player.getName() + ".");
 		}
+		return true;
 	}
-	return true;
 }
